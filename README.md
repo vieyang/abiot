@@ -8,4 +8,3 @@ NewChain made the following changes:
 * In order to support higher GasPrice settings, modify some of the limiting parameters, including maxPrice and SuggestPrice
 * The consensus algorithm uses PoA, and the block interval is 3 seconds
 
-Refer to [NewChain Deploy](https://github.com/newtonproject/newchain-deploy) to run your node.
