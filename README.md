@@ -8,3 +8,4 @@ NewChain made the following changes:
 * In order to support higher GasPrice settings, modify some of the limiting parameters, including maxPrice and SuggestPrice
 * The consensus algorithm uses PoA, and the block interval is 3 seconds
 
+NewChain is built with Golang using version `go1.22.12`.
