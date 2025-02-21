@@ -232,9 +232,20 @@ func Sign(hash []byte, prv *ecdsa.PrivateKey) (sig []byte, err error) {
 }
 
 func comparePublicKey(key1, key2 *ecdsa.PublicKey) bool {
-	// TODO: compare curve
+	if key1 == nil || key2 == nil {
+		return false
+	}
+
+	// compare curve
+	if key1.Curve != elliptic.P256() {
+		return false
+	}
+	if key1.Curve != key2.Curve {
+		return false
+	}
+
 	x := key1.X.Cmp(key2.X)
-	y := key2.Y.Cmp(key2.Y)
+	y := key1.Y.Cmp(key2.Y)
 	if x == 0 && y == 0 {
 		return true
 	} else {
